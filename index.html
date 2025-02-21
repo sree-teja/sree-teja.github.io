@@ -143,7 +143,7 @@
                 <h2>About</h2>
                 <p>👋 Hi, I'm <strong>Sree Teja Nadella</strong>, an <strong>AI Engineer and Researcher</strong> 🤖🔬 with a passion for <strong>Machine Learning</strong>, <strong>Data Science</strong>, and <strong>Large Language Models (LLMs)</strong>. <br> 
                     🎓 Currently pursuing my <strong>Master's in Computer Science at UC San Diego</strong>, I am dedicated to pushing the boundaries of AI innovation. <br> <br> 
-                    🚀 Welcome to my portfolio!</p>               
+                    🚀 Welcome to my portfolio!</p>
                 <h2>SKILLS</h2>
 
                 <div class="skills-container">
@@ -366,6 +366,47 @@
                             <div class="project-links">
                                 <!-- <a href="https://github.com/sree-teja/image-caption-generator?tab=readme-ov-file#overview" target="_blank">Code</a> -->
                                 <a href="https://drive.google.com/file/d/1F49t-Zhv-UBdudghLns9spIlAFnkzRQT/view?usp=sharing" target="_blank">Paper</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="project-card">
+                        <div class="project-preview">
+                            <img loading="lazy" data-src="assets/projects/RAG.png" alt="RAG App Using AWS Bedrock And Langchain">
+                            <h4>RAG App Using AWS Bedrock And Langchain</h4>
+                            <p class="project-brief">Used a Retrieval-Augmented Generation (RAG) system that utilizes multiple PDFs as knowledge sources</p>
+                            <p class="project-tools">Python, PyPDF, Langchain, Streamlit, FAISS-CPU, boto3, AWS CLI</p>
+                        </div>
+                        <button class="view-details-btn">View Details</button>
+                        <div class="project-details hidden">
+                            <div class="project-info">
+                                <!-- <p><strong>Semester</strong> 5</p> -->
+                                <!-- <p><strong>Team size:</strong> 3</p> -->
+                                <p><strong>Date:</strong> 2024</p>
+                                <!-- <p><strong>Course:</strong> Big Data and Management Systems</p> -->
+                            </div>
+                            <p class="project-description">
+                                In this project, we developed <strong>Retrieval-Augmented Generation (RAG) System with AWS Bedrock</strong>, a system designed to retrieve and generate responses using multiple PDFs stored as vector embeddings. The system leverages AWS Bedrock models for efficient and context-aware answer generation.
+                                <ul>
+                                    <li><strong>Data Injection:</strong> Processed multiple PDFs by reading them from a specified folder, splitting them into chunks, and generating vector embeddings using Amazon Titan.</li>
+                                    <li><strong>Vector Storage:</strong> Stored the generated embeddings in a FAISS vector database for efficient retrieval.</li>
+                                    <li><strong>Querying Mechanism:</strong> Performed similarity search within the vector store based on the user's question to retrieve relevant document chunks.</li>
+                                    <li><strong>LLM Integration:</strong> Passed the retrieved document chunks along with a prompt to an LLM model, such as Claude or Llama 2, via AWS Bedrock.</li>
+                                    <li><strong>Response Generation:</strong> The LLM generated answers based on the provided context, ensuring accurate and relevant responses.</li>
+                                </ul>
+                                Key features:
+                                <ul>
+                                    <li>Utilized <strong>FAISS-CPU</strong> for efficient vector-based similarity search.</li>
+                                    <li>Implemented a preprocessing pipeline to structure document chunks for optimal retrieval.</li>
+                                    <li>Integrated AWS services, including <code>boto3</code> and AWS CLI, for seamless cloud-based computation.</li>
+                                    <li>Designed a <strong>Streamlit-based UI</strong> for an interactive user experience.</li>
+                                    <li>Enabled flexible model selection, allowing responses from different AWS Bedrock-supported LLMs.</li>
+                                </ul>
+                                This project showcases the power of Retrieval-Augmented Generation, combining document retrieval and LLMs to generate informed responses, making it useful for knowledge-based applications.
+                            </p>
+                                                                            
+                            <div class="project-links">
+                                <a href="https://github.com/sree-teja/RAG_App" target="_blank">Code</a>
                             </div>
                         </div>
                     </div>
