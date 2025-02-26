@@ -137,7 +137,7 @@ function switchImage() {
 dhead.addEventListener('click', function(event) {
     // Prevent the click from triggering on child links
     if (event.target.tagName.toLowerCase() !== 'a' && !event.target.closest('a')) {
-        // switchImage();
+        switchImage();
     }
 });
 
