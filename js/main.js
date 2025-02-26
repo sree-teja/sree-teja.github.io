@@ -124,22 +124,30 @@ const dhead = document.getElementById('dhead');
 const img = document.querySelector('#dpic img');
 const images = ['assets/me.jpg', 'assets/me2.png'];
 let currentIndex = 0;
+let rotation = 0;
 
 function switchImage() {
-    img.style.opacity = '0';
+    rotation += 180; // Rotate by 180 degrees each switch
+    img.style.transform = `rotateY(${rotation}deg)`;
+    img.style.opacity = '0'; // Fade out before switching image
+
     setTimeout(() => {
         currentIndex = (currentIndex + 1) % images.length;
         img.src = images[currentIndex];
-        img.style.opacity = '1';
-    }, 300);
+
+        // Ensure the image loads before fading in
+        img.onload = () => {
+            img.style.opacity = '1'; // Fade in after image loads
+        };
+    }, 250); // Adjust timing to match rotation effect
 }
 
 dhead.addEventListener('click', function(event) {
-    // Prevent the click from triggering on child links
     if (event.target.tagName.toLowerCase() !== 'a' && !event.target.closest('a')) {
         switchImage();
     }
 });
+
 
 
 document.addEventListener('DOMContentLoaded', function() {
